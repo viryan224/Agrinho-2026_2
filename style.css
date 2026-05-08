@@ -1,1 +1,573 @@
+:root{
+  --verde:#2d6a4f;
+  --verde2:#1b4332;
+  --claro:#f4f7f3;
+  --branco:#ffffff;
+  --texto:#1e1e1e;
+  --sombra:0 10px 25px rgba(0,0,0,.12);
+}
 
+/* DARK MODE */
+body.dark{
+  --claro:#101512;
+  --branco:#18201c;
+  --texto:#f1f1f1;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--claro);
+  color:var(--texto);
+}
+
+/* CONTAINER */
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* HEADER */
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+body.dark .header{
+  background:#18201c;
+}
+
+.nav-area{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+
+.logo{
+  font-size:1.5rem;
+  font-weight:bold;
+  color:var(--verde2);
+}
+
+.nav{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  text-decoration:none;
+  color:var(--texto);
+  font-weight:bold;
+  padding:8px 12px;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.nav a:hover{
+  background:rgba(45,106,79,.12);
+  color:var(--verde2);
+}
+
+.tema-btn{
+  background:var(--verde);
+  color:white;
+  border:none;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:85vh;
+  background:url("depois.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding-top:100px;
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.35);
+}
+
+.hero-box{
+  position:relative;
+  z-index:2;
+  color:white;
+  max-width:700px;
+}
+
+.hero-box h1{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.hero-form{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.hero-form input{
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  width:250px;
+}
+
+/* BOTÃO */
+.btn{
+  background:var(--verde);
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.btn:hover{
+  background:var(--verde2);
+}
+
+/* SEÇÕES */
+.section{
+  padding:80px 0;
+}
+
+.titulo{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:30px;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--branco);
+  padding:20px;
+  border-radius:15px;
+  box-shadow:var(--sombra);
+  transition:.3s;
+  display:flex;
+  flex-direction:column;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card .btn{
+  margin-top:auto;
+}
+
+/* ===== ANTES E DEPOIS ===== */
+.comparacao{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:center;
+  margin-top:30px;
+}
+
+.comparacao img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.texto-comparacao{
+  background:var(--branco);
+  padding:25px;
+  border-radius:15px;
+  box-shadow:var(--sombra);
+}
+
+/* TEXTO VISÍVEL */
+.texto-comparacao h3{
+  color:#111;
+  margin-bottom:10px;
+}
+
+.texto-comparacao p{
+  color:#333;
+  line-height:1.6;
+}
+
+/* BOTÕES */
+.troca-btns{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario{
+  background:var(--branco);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:var(--sombra);
+  max-width:500px;
+  margin:40px auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.formulario input,
+.formulario textarea{
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  font-size:1rem;
+}
+
+.formulario textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+/* RESULTADO */
+.resultado-box{
+  background:var(--branco);
+  padding:20px;
+  border-radius:15px;
+  box-shadow:var(--sombra);
+  margin-top:20px;
+  text-align:center;
+}
+
+/* FOOTER */
+.footer{
+  background:var(--verde2);
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:50px;
+}
+
+/* BOTÃO TOPO */
+#btnTopo{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:var(--verde);
+  color:white;
+  display:none;
+}
+
+/* ===== DARK MODE COMPLETO ===== */
+body.dark{
+  background:#101512;
+  color:#f1f1f1;
+}
+
+body.dark .card,
+body.dark .formulario,
+body.dark .resultado-box,
+body.dark .texto-comparacao{
+  background:#1c1c1c;
+  color:#ffffff;
+}
+
+body.dark p{
+  color:#e0e0e0;
+}
+
+body.dark input,
+body.dark textarea{
+  background:#2a2a2a;
+  color:#fff;
+  border:none;
+}
+
+body.dark .header{
+  background:rgba(24,32,28,0.95);
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+  .nav-area{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav{
+    justify-content:center;
+  }
+
+  .hero{
+    padding:80px 20px;
+    min-height:70vh;
+  }
+
+  .hero-box h1{
+    font-size:2rem;
+  }
+
+  .hero-form{
+    flex-direction:column;
+  }
+
+  .hero-form input{
+    width:100%;
+  }
+
+  .comparacao{
+    grid-template-columns:1fr;
+  }
+
+  .comparacao img{
+    height:220px;
+  }
+    }
+
+/* ========================= */
+/* CORREÇÃO SEÇÃO VERDE */
+/* ========================= */
+
+.verde {
+  color: white;
+}
+
+.verde p,
+.verde h2,
+.verde h3 {
+  color: white;
+}
+
+/* ========================= */
+/* ANTES / DEPOIS MELHORADO */
+/* ========================= */
+
+.comparacao {
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: var(--sombra);
+}
+
+.texto-comparacao {
+  padding: 30px;
+  color: #222; /* força texto escuro */
+}
+
+.texto-comparacao h3 {
+  color: var(--verde2);
+}
+
+.texto-comparacao p {
+  color: #333;
+}
+
+/* ========================= */
+/* FORM CONTATO CORRIGIDO */
+/* ========================= */
+
+#contato .formulario {
+  background: white;
+}
+
+#contato input,
+#contato textarea {
+  background: #fff;
+  color: #222;
+}
+
+#contato input::placeholder,
+#contato textarea::placeholder {
+  color: #666;
+}
+
+/* ========================= */
+/* DARK MODE CORRETO */
+/* ========================= */
+
+body.dark .verde {
+  color: white;
+}
+
+body.dark .comparacao {
+  background: #1c1c1c;
+}
+
+body.dark .texto-comparacao {
+  color: white;
+}
+
+body.dark .texto-comparacao p {
+  color: #ddd;
+}
+
+body.dark #contato .formulario {
+  background: #1f1f1f;
+}
+
+body.dark #contato input,
+body.dark #contato textarea {
+  background: #2a2a2a;
+  color: white;
+}
+
+body.dark #contato input::placeholder,
+body.dark #contato textarea::placeholder {
+  color: #aaa;
+}
+/* ===== CORREÇÃO SIMPLES ===== */
+
+/* Antes e Depois */
+.comparacao{
+  background:#f4f7f3 !important;
+}
+
+.texto-comparacao{
+  color:#1e1e1e !important;
+}
+
+/* Formulário */
+#contato .formulario{
+  background:#f4f7f3 !important;
+}
+
+#contato input,
+#contato textarea{
+  background:white !important;
+  color:#1e1e1e !important;
+}
+
+#contato input::placeholder,
+#contato textarea::placeholder{
+  color:#666 !important;
+}
+#impacto{
+  background: linear-gradient(135deg,#2d6a4f,#1b4332) !important;
+}
+
+#contato{
+  background: linear-gradient(135deg,#2d6a4f,#1b4332) !important;
+}
+/* ===== ANIMAÇÕES E MELHORIAS VISUAIS ===== */
+
+/* TRANSIÇÃO GLOBAL */
+*{
+  transition: all 0.3s ease;
+}
+
+/* BOTÕES MAIS SUAVES */
+.btn{
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* CARDS COM ANIMAÇÃO */
+.card{
+  transition: all 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* RESULTADO COM ENTRADA SUAVE */
+.resultado-box{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.6s ease forwards;
+}
+
+@keyframes aparecer{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MENSAGEM INTELIGENTE */
+#mensagem-inteligente{
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--verde2);
+}
+
+/* ERRO VISUAL */
+#mensagem-erro{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* BARRA DE PROGRESSO MAIS BONITA */
+.resultado-box div[style*="width"]{
+  transition: width 0.8s ease;
+  border-radius: 20px;
+  }
+/* CORREÇÃO ANTES/DEPOIS NO CELULAR */
+@media (max-width: 800px){
+
+  .comparacao{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .comparacao img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .texto-comparacao{
+    width: 100%;
+    text-align: left;
+  }
+
+  #listaSolo{
+    line-height: 1.6;
+  }
+
+}
